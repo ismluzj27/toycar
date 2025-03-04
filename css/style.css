@@ -2,12 +2,21 @@
 
 /* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
 
-body { background-color: #ffcc00; }
-        .navbar { background-color: #ff0000; }
+:root {
+  --tcred: #af3023;
+    --tcred-dark: #cf2013;
+  --tcyel: #efd9a0;
+    --tcyel-bright: #fff200;
+}
+
+body { background-color: var(--tcyel); }
+        .navbar { background-color: var(--tcred); }
         .navbar-brand, .nav-link { color: white !important; }
         .carousel-item img { height: 500px; object-fit: cover; }
-        .shop-btn { background-color: #ff0000; color: white; padding: 15px 30px; font-size: 1.5rem; }
-        .shop-btn:hover { background-color: #cc0000; }
+        .shop-btn { background-color: var(--tcred); color: white; padding: 15px 30px; font-size: 1.5rem; }
+        .shop-btn:hover { background-color: var(--tcred-dark); }
+        .buy-btn { background-color: var(--tcred); color: white; }
+        .buy-btn:hover { background-color: var(--tcyel-bright) }
         .card { border: none; }
 
 /*
