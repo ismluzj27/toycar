@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TOYCAR - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <style>
+        .buy-btn {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+
+    <?-- TODO: DJANGO TEMPLATE TO GENERATE MORE CARDS PER PRODUCT -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{% url "index" %}">TOYCAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Speed Cars Category -->
+    <div class="container my-5">
+        <h2 class="text-center">Speed Cars</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Speedster X">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Speedster X</h5>
+                        <p class="card-text">A high-speed racer with sleek design.</p>
+                        <a href="shop1.html" class="buy-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Lightning Flash">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Lightning Flash</h5>
+                        <p class="card-text">Blazing fast, aerodynamic racing car.</p>
+                        <a href="shop2.html" class="buy-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Turbo Racer">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Turbo Racer</h5>
+                        <p class="card-text">An ultra-fast car for thrill seekers.</p>
+                        <a href="shop3.html" class="buy-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Classic Cars Category -->
+    <div class="container my-5">
+        <h2 class="text-center">Classic Cars</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Classic Cruiser">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Classic Cruiser</h5>
+                        <p class="card-text">A vintage-style toy car for collectors.</p>
+                        <a href="shop4.html" class="buy-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Retro Roadster">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Retro Roadster</h5>
+                        <p class="card-text">An elegant ride with a touch of nostalgia.</p>
+                        <a href="shop5.html" class="buy-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Antique Elegance">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Antique Elegance</h5>
+                        <p class="card-text">A rare beauty with timeless charm.</p>
+                        <a href="shop6.html" class="buy-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Off-Road Vehicles Category -->
+    <div class="container my-5">
+        <h2 class="text-center">Off-Road Vehicles</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Off-Road Beast">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Off-Road Beast</h5>
+                        <p class="card-text">Built for rugged terrain and adventure.</p>
+                        <a href="shop7.html" class="buy-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Mud Master">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mud Master</h5>
+                        <p class="card-text">Tackle any terrain with ease and power.</p>
+                        <a href="shop8.html" class="buy-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Trail Blazer">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Trail Blazer</h5>
+                        <p class="card-text">Perfect for off-road thrill seekers.</p>
+                        <a href="shop9.html" class="buy-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
