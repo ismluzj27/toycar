@@ -3,6 +3,7 @@
 /* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
 
 :root {
+  --tcbe: #ffb829 ;
   --tcred: #af3023;
     --tcred-dark: #cf2013;
   --tcyel: #efd9a0;
@@ -15,9 +16,12 @@ body { background-color: var(--tcyel); }
         .carousel-item img { height: 500px; object-fit: cover; }
         .shop-btn { background-color: var(--tcred); color: white; padding: 15px 30px; font-size: 1.5rem; }
         .shop-btn:hover { background-color: var(--tcred-dark); }
-        .buy-btn { background-color: var(--tcred); color: white; }
-        .buy-btn:hover { background-color: var(--tcyel-bright) }
+        .buy-btn { background-color: var(--tcred); text-decoration: none; color: white;
+          display: inline-block; padding: 10px 20px; border-radius: 5px;
+          text-align: center; font-weight: bold; transition: background-color 0.3s ease; }
+.buy-btn:hover { background-color: var(--tcyel-bright); text-decoration: none; color: black; }
         .card { border: none; }
+        .cart-icon { width: 30px; height: auto; }
 
 /*
  * What follows is the result of much research on cross-browser styling.
