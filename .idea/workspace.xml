@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abfc51c6-3156-462c-878b-02634cefc29c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/toycar/templates/checkout.html" afterDir="false" />
+    <list default="true" id="abfc51c6-3156-462c-878b-02634cefc29c" name="Changes" comment="i did some backend stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toycar/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/templates/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/toycar/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toycar/templates/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/templates/shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toycar/templates/shoptemplate.html" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/templates/shoptemplate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toycar/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toycar/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toycar_django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/toycar_django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toycar_django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/toycar_django/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,10 +110,24 @@
       <workItem from="1742447099165" duration="138000" />
       <workItem from="1742447333129" duration="1051000" />
       <workItem from="1742773226436" duration="2131000" />
+      <workItem from="1742778222060" duration="3140000" />
     </task>
+    <task id="LOCAL-00001" summary="i did some backend stuff">
+      <option name="closed" value="true" />
+      <created>1742778258172</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778258172</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="i did some backend stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="i did some backend stuff" />
   </component>
 </project>

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'toycar',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,20 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '487930752054-b77d1aciquh7ucuvuuc7hc221k3t9por.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = '/index/'
+
+TEMPLATES[0]['OPTIONS']['context_processors'] += [
+    'social_django.context_processors.backends',
+    'social_django.context_processors.login_redirect',
+]
