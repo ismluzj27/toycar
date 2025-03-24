@@ -5,34 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abfc51c6-3156-462c-878b-02634cefc29c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/toycar_django.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/firebase.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/templates/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/templates/shop.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/templates/shoptemplate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar_django/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar_django/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar_django/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar_django/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toycar_django/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toycar/templates/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toycar/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toycar/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toycar/templates/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/templates/shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toycar/templates/shoptemplate.html" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/templates/shoptemplate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toycar/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toycar/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,36 +32,40 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2uZ7vOkTUmUqRWDuMGYO5cPC1gV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Django Server.toycar_django.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/hawthornemerald/pycharm/toycar_django/toycar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Django Server.toycar_django.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hawthornemerald/pycharm/toycar_django/toycar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/toycar" />
       <recent name="$PROJECT_DIR$/toycar/templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/toycar/static/css" />
+      <recent name="$PROJECT_DIR$/toycar/static" />
     </key>
   </component>
   <component name="RunManager">
@@ -126,7 +110,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742444472646</updated>
-      <workItem from="1742444481520" duration="1878000" />
+      <workItem from="1742444481520" duration="2223000" />
+      <workItem from="1742447099165" duration="138000" />
+      <workItem from="1742447333129" duration="1051000" />
+      <workItem from="1742773226436" duration="2131000" />
     </task>
     <servers />
   </component>
