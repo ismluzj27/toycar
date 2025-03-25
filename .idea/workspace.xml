@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abfc51c6-3156-462c-878b-02634cefc29c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toycar/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/toycar/static/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -113,9 +115,22 @@
       <workItem from="1742447333129" duration="1051000" />
       <workItem from="1742773226436" duration="2131000" />
     </task>
+    <task id="LOCAL-00001" summary="dih">
+      <option name="closed" value="true" />
+      <created>1742881553371</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742881553371</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dih" />
+    <option name="LAST_COMMIT_MESSAGE" value="dih" />
   </component>
 </project>
