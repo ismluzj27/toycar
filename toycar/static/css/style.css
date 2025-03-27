@@ -10,17 +10,20 @@
 }
 
 body { background-color: var(--tcyel); }
-        .navbar { background-color: var(--tcred); }
-        .navbar-brand, .nav-link { color: white !important; }
-        .carousel-item img { height: 500px; object-fit: cover; }
-        .shop-btn { background-color: var(--tcred); color: white; padding: 15px 30px; font-size: 1.5rem; }
-        .shop-btn:hover { background-color: var(--tcred-dark); color: white; }
-        .buy-btn { background-color: var(--tcred); color: white; }
-        .buy-btn:hover { background-color: var(--tcyel-bright) }
-        .card { border: none; }
-        .cart-icon {width: 30px; height: auto;}
-        .googleicon {width: 30px; height: auto;}
-
+.navbar { background-color: var(--tcred); }
+.navbar-brand, .nav-link { color: white !important; }
+.carousel-item img { height: 500px; object-fit: cover; }
+.shop-btn { background-color: var(--tcred); color: white; padding: 15px 30px; font-size: 1.5rem; }
+.shop-btn:hover { background-color: var(--tcred-dark); color: white; }
+.buy-btn { background-color: var(--tcred); color: white; }
+.buy-btn:hover { background-color: var(--tcyel-bright); }
+.card { border: none; }
+.std-icon { width: 30px; height: 30px; }
+.navbar-nav { display: flex; align-items: center; }
+.nav-item.ms-auto { margin-left: auto; }
+.nav-item { margin-right: 5px; }
+.nav-item .std-icon { width: 40px; height: 40px; border-radius: 50%; }
+.nav-item .cart-icon { width: 40px; height: 40px}
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,

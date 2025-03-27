@@ -14,25 +14,49 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">TOYCAR</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'shop' %}">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'checkout' %}">
-                            <img src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png" alt="Cart" class="cart-icon">
-                        </a>
-                    </li>
-                </ul>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">TOYCAR</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'shop' %}">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'social:begin' 'google-oauth2' %}" class="google-btn nav-link">
+                        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" class="std-icon">
+                        Sign in
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'checkout' %}">
+                        <img src="{% static 'carticon.png' %}" alt="Cart" class="cart-icon">
+                    </a>
+                </li>
+                <!-- Profile icon moved to the right -->
+                <li class="nav-item ms-auto">
+                    <a class="nav-link" href="#">
+                        <img src="{% static 'pfp.png' %}" alt="Profile" class="std-icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+                </ul> 
             </div>
         </div>
     </nav>

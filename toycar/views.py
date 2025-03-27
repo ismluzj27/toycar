@@ -19,6 +19,9 @@ def checkout(request):
 def shop(request):
     return render(request, "shop.html")
 
+def settings(request):
+    return render(request, "settings.html")
+
 def item(request, item_id):
     item_name = "placeholder" # TODO implement, probably with db?
     item_desc = "foo bar baz or whatever they say"
