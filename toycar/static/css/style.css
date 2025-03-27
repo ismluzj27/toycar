@@ -19,6 +19,7 @@ body { background-color: var(--tcyel); }
         .buy-btn:hover { background-color: var(--tcyel-bright) }
         .card { border: none; }
         .cart-icon {width: 30px; height: auto;}
+        .googleicon {width: 30px; height: auto;}
 
 /*
  * What follows is the result of much research on cross-browser styling.
