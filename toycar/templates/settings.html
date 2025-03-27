@@ -41,8 +41,9 @@
                         <img src="{% static 'carticon.png' %}" alt="Cart" class="cart-icon">
                     </a>
                 </li>
+                <!-- Profile icon -->
                 <li class="nav-item ms-auto">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{% url 'settings' %}">
                         <img src="{% static 'pfp.png' %}" alt="Profile" class="std-icon">
                     </a>
                 </li>
@@ -50,6 +51,10 @@
         </div>
     </div>
 </nav>
+                </ul> 
+            </div>
+        </div>
+    </nav>
 
 <!-- Settings Page Content -->
 <div class="container my-5">

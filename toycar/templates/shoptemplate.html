@@ -9,7 +9,7 @@
     <link href="{% static "css/style.css" %}" rel="stylesheet">
 </head>
 <body>
-   <!-- Navbar -->
+ <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="#">TOYCAR</a>
@@ -41,9 +41,9 @@
                         <img src="{% static 'carticon.png' %}" alt="Cart" class="cart-icon">
                     </a>
                 </li>
-                <!-- Profile icon moved to the right -->
+                <!-- Profile icon -->
                 <li class="nav-item ms-auto">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{% url 'settings' %}">
                         <img src="{% static 'pfp.png' %}" alt="Profile" class="std-icon">
                     </a>
                 </li>
