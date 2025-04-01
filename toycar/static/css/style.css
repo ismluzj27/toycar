@@ -5,17 +5,22 @@
 :root {
   --tcred: #af3023;
     --tcred-dark: #cf2013;
+    --tcred-light: #de2023;
   --tcyel: #efd9a0;
-    --tcyel-bright: #fff200;
+    --tcyel-bright: #fff400;
+    --tcyel-light: #fff441;
+    --tcyel-dark: #b7b441;
 }
 
+/* Original CSS */
 body { background-color: var(--tcyel); }
 .navbar { background-color: var(--tcred); }
 .navbar-brand, .nav-link { color: white !important; }
 .carousel-item img { height: 500px; object-fit: cover; }
 .shop-btn { background-color: var(--tcred); color: white; padding: 15px 30px; font-size: 1.5rem; }
 .shop-btn:hover { background-color: var(--tcred-dark); color: white; }
-.buy-btn { background-color: var(--tcred); color: white; }
+.buy-btn { background-color: var(--tcred); color: white; padding: 10px 15px; font-size: 1.25rem; text-decoration: none; border-radius: 8px;
+}
 .buy-btn:hover { background-color: var(--tcyel-bright); }
 .card { border: none; }
 .std-icon { width: 30px; height: 30px; }
@@ -23,7 +28,63 @@ body { background-color: var(--tcyel); }
 .nav-item.ms-auto { margin-left: auto; }
 .nav-item { margin-right: 5px; }
 .nav-item .std-icon { width: 40px; height: 40px; border-radius: 50%; }
-.nav-item .cart-icon { width: 40px; height: 40px}
+.nav-item .cart-icon { width: 40px; height: 40px; }
+.card-img-top {width: 417px; height: 300px;}
+/* Speed Cars Page Specific Styles */
+.speed-header { background-image: url('https://via.placeholder.com/1600x500'); background-size: cover; background-position: center; color: white; padding: 25px 0; text-align: center; }
+.speed-title { font-size: 3rem; font-weight: bold; color: var(--tcred-dark); text-transform: uppercase; margin-bottom: 20px; }
+.speed-description { font-size: 1.2rem; color: var(--tcred); margin-bottom: 30px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto; }
+.speed-image { width: 100%; height: auto; border-radius: 8px; }
+.speed-carousel .carousel-item { transition: transform 1s ease; }
+.speed-carousel img { height: 400px; object-fit: cover; border-radius: 8px; }
+.speed-testimonials { background-color: var(--tcyel-light); padding: 50px 0; text-align: center; }
+.speed-testimonials h2 { font-size: 2.5rem; margin-bottom: 30px; }
+.testimonial-card { background-color: white; border: none; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center; margin: 15px; }
+.testimonial-card img { width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px; }
+.testimonial-card p { font-size: 1.1rem; color: var(--tcred-dark); }
+
+/* Classic Cars Page Specific Styles */
+.classic-header { background-image: url('https://via.placeholder.com/1600x500'); background-size: cover; background-position: center; color: white; padding: 25px 0; text-align: center; }
+.classic-title { font-size: 3rem; font-weight: bold; color: var(--tcyel); text-transform: uppercase; margin-bottom: 20px; }
+.classic-description { font-size: 1.2rem; color: var(--tcred); margin-bottom: 30px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto; }
+.classic-image { width: 100%; height: auto; border-radius: 8px; }
+.classic-testimonials { background-color: var(--tcred-light); padding: 50px 0; text-align: center; }
+.classic-testimonials h2 { font-size: 2.5rem; margin-bottom: 30px; }
+.classic-testimonial-card { background-color: white; border: none; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center; margin: 15px; }
+.classic-testimonial-card img { width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px; }
+.classic-testimonial-card p { font-size: 1.1rem; color: var(--tcyel); }
+
+/* Off-road Page Specific Styles */
+.offroad-header { background-image: url('https://via.placeholder.com/1600x500'); background-size: cover; background-position: center; color: white; padding: 25px 0; text-align: center; }
+.offroad-title { font-size: 3rem; font-weight: bold; color: var(--tcred); text-transform: uppercase; margin-bottom: 20px; }
+.offroad-description { font-size: 1.2rem; color: var(--tcyel); margin-bottom: 30px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto; }
+.offroad-image { width: 100%; height: auto; border-radius: 8px; }
+.offroad-testimonials { background-color: var(--tcred-light); padding: 50px 0; text-align: center; }
+.offroad-testimonials h2 { font-size: 2.5rem; margin-bottom: 30px; }
+.offroad-testimonial-card { background-color: white; border: none; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center; margin: 15px; }
+.offroad-testimonial-card img { width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px; }
+.offroad-testimonial-card p { font-size: 1.1rem; color: var(--tcyel-dark); }
+
+/* New styles for clickable category titles */
+.category-btn {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--tcred); /* Red accent color */
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border: 2px solid var(--tcred); /* Border matching the text color */
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.category-btn:hover {
+    background-color: var(--tcred);
+    color: white;
+}
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
