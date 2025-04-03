@@ -1,4 +1,4 @@
-##Driven by passion, fueled by speed – TOYCAR brings high-quality toy cars to enthusiasts of all ages.
+## Driven by passion, fueled by speed – TOYCAR brings high-quality toy cars to enthusiasts of all ages.
 
 We created this project to allow for a wide arsenal of features such as log in, a cart page that tracks multiple cars, and a flexible back end system that handles the informationof each item and displays it on the screen.
 
