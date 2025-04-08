@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .firebase import database_ref
 
 
 # Create your views here.
@@ -17,7 +18,8 @@ def checkout(request):
     return render(request, "checkout.html")
 
 def shop(request):
-    return render(request, "shop.html")
+    return render(request, "shop.html",
+                  {})
 
 def settings(request):
     return render(request, "settings.html")
@@ -41,7 +43,18 @@ def care(request):
     return render(request, "care.html")
 
 def item(request, item_id):
-    item_name = "Toy Car" # TODO implement, probably with db?
-    item_desc = "This will be fixed in the back end"
+    car_ref = database_ref.child(f"cars/{item_id}")
+    item_name = car_ref.child("name").get()
+    item_desc = car_ref.child("desc").get()
+    item_price = car_ref.child("price").get()
+    item_category = ""
+    match car_ref.child("category").get():
+        case "speed":
+            item_category = "Speed Cars"
+        case "offroad":
+            item_category = "Offroad Cars"
+        case "classic":
+            item_category = "Classic Cars"
     return render(request, "shoptemplate.html",
-                  {"item_id": item_id, "item_name": item_name, "item_desc": item_desc})
+                  {"item_id": item_id, "item_name": item_name, "item_desc": item_desc,
+                   "item_price": item_price, "item_category": item_category})

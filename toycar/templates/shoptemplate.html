@@ -13,13 +13,22 @@
 {% include 'navbar.html' %}
 
     <!-- Product Display -->
-    <div class="container product-container">
-        <img src="https://via.placeholder.com/400x400" class="product-img" alt="Toy Car">
-        <div class="product-details">
-            <h2>{{ item_name }}</h2>
-            <p>{{ item_desc }}</p>
-            <h4>$19.99</h4>
-             <a href="{% url 'checkout' %}" class="buy-btn">Buy Now</a>
+    <div class="container product-container my-3">
+        <div class="row align-items-start">
+            <div class="col-5">
+                <img src="{% static item_id|add:".JPG" %}" class="product-img" alt="Toy Car">
+            </div>
+            <div class="col">
+                <div class="product-details">
+                <h2>{{ item_name }}</h2>
+                <p>{{ item_desc }}</p>
+                    <p>Category: <i>{{ item_category }}</i></p>
+                <h4>${{ item_price }}</h4>
+                    <br>
+                 <a href="{% url 'checkout' %}" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+        
         </div>
     </div>
 
