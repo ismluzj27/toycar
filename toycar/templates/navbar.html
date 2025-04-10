@@ -35,11 +35,15 @@
                 </li>
                 
                 <li class="nav-item">
-                    {% if user.is_authenticated and user_social %}
-                        <a href="{% url 'logout' %}" class="nav-link profile-btn">
-                            <img src="{{ user_social.extra_data.picture }}" alt="{{ user.first_name }}'s profile picture" class="profile-icon">
-                            {{ user.first_name }}
-                        </a>
+                    {% if user.is_authenticated %}
+                        {% for auth in user.social_auth.all %}
+                            {% if auth.provider == 'google-oauth2' %}
+                                <a href="{% url 'settings' %}" class="nav-link profile-btn">
+                                    <img src="{% static 'pfp.png' %}" alt="{{ user.first_name }}'s profile picture" class="std-icon">
+                                    {{ user.first_name }}
+                                </a>
+                            {% endif %}
+                        {% endfor %}
                     {% else %}
                         <a href="{% url 'social:begin' 'google-oauth2' %}" class="google-btn nav-link">
                             <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" class="std-icon">
@@ -57,11 +61,11 @@
                     </a>
                 </li>
                 <!-- Profile icon -->
-                <li class="nav-item ms-auto">
-                    <a class="nav-link" href="{% url 'settings' %}">
-                        <img src="{% static 'pfp.png' %}" alt="Profile" class="std-icon">
-                    </a>
-                </li>
+{#                <li class="nav-item ms-auto">#}
+{#                    <a class="nav-link" href="{% url 'settings' %}">#}
+{#                        <img src="{% static 'pfp.png' %}" alt="Profile" class="std-icon">#}
+{#                    </a>#}
+{#                </li>#}
             </ul>
         </div>
     </div>

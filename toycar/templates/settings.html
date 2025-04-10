@@ -17,7 +17,7 @@
     <h2 class="text-center mb-4">Account Settings</h2>
     <div class="row">
         <!-- Personal Information Section -->
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Personal Information</h5>
@@ -40,34 +40,35 @@
             </div>
         </div>
         <!-- Password Change Section -->
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Change Password</h5>
-                    <form>
-                        <div class="mb-3">
-                            <label for="currentPassword" class="form-label">Current Password</label>
-                            <input type="password" class="form-control" id="currentPassword" placeholder="Enter your current password">
-                        </div>
-                        <div class="mb-3">
-                            <label for="newPassword" class="form-label">New Password</label>
-                            <input type="password" class="form-control" id="newPassword" placeholder="Enter a new password">
-                        </div>
-                        <div class="mb-3">
-                            <label for="confirmPassword" class="form-label">Confirm New Password</label>
-                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your new password">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Change Password</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+{#        <div class="col-md-6">#}
+{#            <div class="card">#}
+{#                <div class="card-body">#}
+{#                    <h5 class="card-title">Change Password</h5>#}
+{#                    <form>#}
+{#                        <div class="mb-3">#}
+{#                            <label for="currentPassword" class="form-label">Current Password</label>#}
+{#                            <input type="password" class="form-control" id="currentPassword" placeholder="Enter your current password">#}
+{#                        </div>#}
+{#                        <div class="mb-3">#}
+{#                            <label for="newPassword" class="form-label">New Password</label>#}
+{#                            <input type="password" class="form-control" id="newPassword" placeholder="Enter a new password">#}
+{#                        </div>#}
+{#                        <div class="mb-3">#}
+{#                            <label for="confirmPassword" class="form-label">Confirm New Password</label>#}
+{#                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your new password">#}
+{#                        </div>#}
+{#                        <button type="submit" class="btn btn-primary">Change Password</button>#}
+{#                    </form>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
     <!-- Delete Account Section -->
     <div class="text-center my-5">
         <h4>Delete Account</h4>
         <p>Are you sure you want to delete your account? This action is irreversible.</p>
+        <a class="btn btn-outline-danger" href="{% url 'logout' %}">Logout</a>
         <button class="btn btn-danger">Delete Account</button>
     </div>
 </div>

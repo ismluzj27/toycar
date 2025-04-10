@@ -1,8 +1,12 @@
 from django.shortcuts import render, redirect
 from .firebase import database_ref
-
+from django.contrib.auth import logout
 
 # Create your views here.
+
+def logout_view(request):
+    logout(request)
+    return redirect("index")
 
 def blank(request):
     return redirect("index")
