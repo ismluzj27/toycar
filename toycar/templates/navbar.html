@@ -33,11 +33,23 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="{% url 'faq' %}">FAQs</a>
                 </li>
+                
                 <li class="nav-item">
-                    <a href="{% url 'social:begin' 'google-oauth2' %}" class="google-btn nav-link">
-                        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" class="std-icon">
-                        Sign in
-                    </a>
+                    {% if user.is_authenticated and user_social %}
+                        <a href="{% url 'logout' %}" class="nav-link profile-btn">
+                            <img src="{{ user_social.extra_data.picture }}" alt="{{ user.first_name }}'s profile picture" class="profile-icon">
+                            {{ user.first_name }}
+                        </a>
+                    {% else %}
+                        <a href="{% url 'social:begin' 'google-oauth2' %}" class="google-btn nav-link">
+                            <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" class="std-icon">
+                            Sign in
+                        </a>
+                    {% endif %}
+{#                    <a href="{% url 'social:begin' 'google-oauth2' %}" class="google-btn nav-link">#}
+{#                        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" class="std-icon">#}
+{#                        Sign in#}
+{#                    </a>#}
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'checkout' %}">
