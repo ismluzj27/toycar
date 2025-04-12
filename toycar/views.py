@@ -1,3 +1,5 @@
+import json
+
 from django.shortcuts import render, redirect
 from .firebase import database_ref
 from django.contrib.auth import logout
@@ -47,7 +49,16 @@ def care(request):
     return render(request, "care.html")
 
 def item(request, item_id):
+    if request.method == "POST":
+        body = json.loads(request.body.decode('UTF-8'))
+        id = body['id']
+        print(id)
+        return redirect("shop")
+
     car_ref = database_ref.child(f"cars/{item_id}")
+    if car_ref.get() is None:
+        return redirect('shop')
+
     item_name = car_ref.child("name").get()
     item_desc = car_ref.child("desc").get()
     item_price = car_ref.child("price").get()
@@ -62,3 +73,8 @@ def item(request, item_id):
     return render(request, "shoptemplate.html",
                   {"item_id": item_id, "item_name": item_name, "item_desc": item_desc,
                    "item_price": item_price, "item_category": item_category})
+
+
+def auth_google_oauth2(request,state):
+    print("request yo")
+    return redirect("shop")

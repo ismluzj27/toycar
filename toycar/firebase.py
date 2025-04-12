@@ -22,3 +22,6 @@ firebase_admin.initialize_app(cred, {
 
 # Reference to the Realtime Database
 database_ref = db.reference()
+
+def add_to_cart(usermail, item_id):
+    pass

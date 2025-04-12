@@ -21,7 +21,11 @@ body { background-color: var(--tcyel); }
 .shop-btn:hover { background-color: var(--tcred-dark); color: white; }
 .buy-btn { background-color: var(--tcred); color: white; padding: 10px 15px; font-size: 1.25rem; text-decoration: none; border-radius: 8px;
 }
-.buy-btn:hover { background-color: var(--tcyel-bright); }
+.cart-btn { padding: 10px 15px; font-size: 1.25rem; color: var(--tcred); border-color: var(--tcred); }
+.cart-btn:hover { background-color: var(--tcred) }
+.buy-btn:hover { background-color: var(--tcyel-bright); color: var(--tcred-dark)}
+.buy-btn-outline { color: white; padding: 10px 15px; font-size: 1.25rem; text-decoration: none; border-radius: 8px;
+}
 .card { border: none; }
 .std-icon { width: 30px; height: 30px; }
 .navbar-nav { display: flex; align-items: center; }
