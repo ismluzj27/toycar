@@ -9,7 +9,7 @@ We created this project to allow for a wide arsenal of features such as log in, 
  - Checkout page
  - Contact page
  - FAQs page
- - User profile settings page
+ - User profile settings page 
  - How to clean and care for your toy cars.
 
 James was the front-end developer, expanding from the home page and adding a rich variety of pages with interactive links, smooth and responsive UI—all to create a final product. To achieve this, lots of tweaking and style classes were added in the cascading style sheet to achieve the final goal of clean, responsive UI. He worked effectively with Bootstrap framework to create a plethora of html elements and even included some modularity, all that fit into the layout of the website and contribute to a rich user content experience.
