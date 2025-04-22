@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'toycar',
     'social_django',
 ]
-#
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
