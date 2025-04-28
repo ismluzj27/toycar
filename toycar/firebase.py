@@ -43,5 +43,24 @@ if not firebase_admin._apps:
 # Reference to the Realtime Database
 database_ref = db.reference()
 
-def add_to_cart(usermail, item_id):
-    pass
+def add_to_cart(email, item_id):
+    item_ref = database_ref.child("users").child(email).child("items").child(item_id)
+    if item_ref.get() is None:
+        item_ref.update({
+            "qty": 1
+        })
+    else:
+        quant = int(str(item_ref.get("qty")))
+        item_ref.update({
+            "qty": quant + 1
+        })
+
+def add_user(user, name, email):
+    users = database_ref.child("users")
+    if users.child(email).get() is not None:
+        print(email, "already exists")
+        return
+    users.child(email).update({
+        "items": []
+    })
+    print(f"User {email} added")

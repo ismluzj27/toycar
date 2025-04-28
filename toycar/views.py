@@ -1,7 +1,7 @@
 import json
 
 from django.shortcuts import render, redirect
-from .firebase import database_ref
+from .firebase import database_ref, add_user, add_to_cart
 from django.contrib.auth import logout
 
 # Create your views here.
@@ -52,6 +52,13 @@ def item(request, item_id):
     if request.method == "POST":
         body = json.loads(request.body.decode('UTF-8'))
         id = body['id']
+        email = None
+        if request.user.is_authenticated:
+            email = request.user.email
+            add_to_cart(email, id)
+        else:
+            print("UNAUTH")
+            return redirect("login")
         print(id)
         return redirect("shop")
 
@@ -77,4 +84,8 @@ def item(request, item_id):
 
 def auth_google_oauth2(request,state):
     print("request yo")
-    return redirect("shop")
+    user = request.user
+    name = user.get_full_name()  # or user.first_name + user.last_name
+    email = user.email  # usually mapped automatically
+    add_user(user, name, email)
+    return redirect('shop')
