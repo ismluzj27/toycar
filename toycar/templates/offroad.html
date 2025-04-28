@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TOYCAR - Off-road Vehicles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar -->
+{% include 'navbar.html' %}
+<!-- Off-road Vehicles Hero Section -->
+<div class="offroad-header">
+    <h1 class="offroad-title">Off-Road Vehicles</h1>
+    <p class="speed-description">Explore our rugged, adventure-ready off-road vehicles designed to tackle the toughest terrains and provide a thrilling experience for every explorer.</p>
+</div>
+
+<!-- Off-road Vehicles Catalog -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'offroad1.JPG' %}" class="offroad-image card-img-top" alt="Off-Road Beast">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Off-Road Beast</h5>
+                    <p class="card-text">Built for rugged terrain and adventure. Unleash your wild side with this powerhouse.</p>
+                    <a href="{% url 'item' 'offroad1' %}" class="buy-btn">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'offroader.JPG' %}" class="offroad-image card-img-top" alt="Mud Master">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Mud Master</h5>
+                    <p class="card-text">Perfect for muddy trails, this monster is ready for any off-road challenge.</p>
+                    <a href="{% url 'item' 'offroad2' %}" class="buy-btn">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'classicoror.JPG' %}" class="offroad-image card-img-top" alt="Trail Blazer">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Trail Blazer</h5>
+                    <p class="card-text">Built for adventure, designed to take on the toughest trails with ease.</p>
+                    <a href="{% url 'item' 'offroad3' %}" class="buy-btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Off-road Testimonials Section -->
+<div class="offroad-testimonials">
+    <h2>What Our Customers Are Saying</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="offroad-testimonial-card">
+            
+                <p>"The Off-Road Beast is the ultimate vehicle for tough terrain! It handled everything with ease. Highly recommend!"</p>
+                <p>- Alex D.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="offroad-testimonial-card">
+               
+                <p>"Mud Master truly lives up to its name. It dominated the mud trails like a champ. So much fun!"</p>
+                <p>- Casey J.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="offroad-testimonial-card">
+                
+                <p>"Trail Blazer is the perfect companion for off-road adventures. No terrain is too difficult for this machine!"</p>
+                <p>- Jordan M.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

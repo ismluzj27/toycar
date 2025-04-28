@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TOYCAR - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar -->
+{% include 'navbar.html' %}
+
+<!-- Care Guide Content -->
+<div class="container my-5">
+    <h1 class="text-center mb-4">Toy Car Care Guide</h1>
+    <p class="text-center">Keep your toy cars in top shape with these easy care tips.</p>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h3>Cleaning Your Toy Cars</h3>
+            <ul>
+                <li>Use a soft microfiber cloth to remove dust and fingerprints.</li>
+                <li>For stubborn dirt, use a slightly damp cloth with mild soap.</li>
+                <li>Avoid harsh chemicals that can damage paint and plastic.</li>
+            </ul>
+
+            <h3>Storage Tips</h3>
+            <ul>
+                <li>Store toy cars in a cool, dry place to prevent fading.</li>
+                <li>Keep them in display cases to avoid scratches.</li>
+                <li>Avoid direct sunlight to prevent discoloration.</li>
+            </ul>
+            
+            <h3>Handling & Maintenance</h3>
+        <ul>
+            <li>Handle with clean hands to prevent smudging.</li>
+            <li>Check wheels and axles regularly for dirt or damage.</li>
+            <li>For collectible cars, avoid excessive play to maintain value.</li>
+        </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'care-guide.png' %}" class="img-fluid rounded" alt="Toy Car Cleaning">
+        </div>
+    </div>
+
+    <div class="mt-4">
+        
+    </div>
+
+
+</body>
+</html>

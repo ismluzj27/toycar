@@ -7,37 +7,91 @@
     <title>TOYCAR - Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <style>
+    .no-bezel {
+      box-shadow: none !important;
+      border-width: 1px !important;
+    }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'index' %}">TOYCAR</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'shop' %}">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<!-- Navbar -->
+{% include 'navbar.html' %}
 
     <!-- Product Display -->
-    <div class="container product-container">
-        <img src="https://via.placeholder.com/400x400" class="product-img" alt="Toy Car">
-        <div class="product-details">
-            <h2>{{ item_name }}</h2>
-            <p>{{ item_desc }}</p>
-            <h4>$19.99</h4>
-            <button class="btn buy-btn">Buy Now</button>
+    <div class="container product-container my-3">
+        <div class="row align-items-start">
+            <div class="col-5">
+                <img src="{% static item_id|add:".JPG" %}" class="product-img" alt="Toy Car">
+            </div>
+            <div class="col-7">
+                <div class="product-details">
+                <h2>{{ item_name }}</h2>
+                <p>{{ item_desc }}</p>
+                    <p>Category: <i>{{ item_category }}</i></p>
+                <h4>${{ item_price }}</h4>
+                <div class="d-inline-flex">
+                    <a style="text-decoration: none; margin-right: 10px;" href="{% url 'checkout' %}">
+                        <button onclick="addToCart()"
+                                class="btn buy-btn btn-danger no-bezel">Buy Now</button>
+                    </a>
+                    <a style="text-decoration: none; margin-right: 10px;" href="{% url 'shop' %}">
+                        <button onclick="addToCart()"
+                            class="btn cart-btn btn-outline-danger">Add to Cart</button>
+                        <script>
+                            function addToCart() {
+                                console.log("Adding to cart " + "{{ item_id }}");
+                                var cat;
+                                const csrf = getCookie("csrftoken");
+                                switch ("{{item_category}}") {
+                                    case "Speed Cars":
+                                        cat = "speed"; break;
+                                    case "Offroad Cars":
+                                        cat = "offroad"; break;
+                                    case "Classic Cars":
+                                        cat = "classic"; break;
+                                    default:
+                                        error("Unknown category found");
+                                        cat = null;
+                                }
+                                fetch("{% url "item" item_id %}", {
+                                    method: "POST",
+                                    body: JSON.stringify({
+                                        "id": "{{ item_id }}"
+                                    }),
+                                    headers: {
+                                        "X-CSRFToken": csrf,
+                                        // "Content-type": "application/json; charset=UTF-8",
+                                    }
+                                });
+                                
+                            }
+                        </script>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        
         </div>
     </div>
-
+    <script>
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
