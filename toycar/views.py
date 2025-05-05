@@ -1,7 +1,7 @@
 import json
 
 from django.shortcuts import render, redirect
-from .firebase import database_ref, add_user, add_to_cart
+from .firebase import database_ref, add_user, add_to_cart, sanitize_email, get_cart
 from django.contrib.auth import logout
 
 # Create your views here.
@@ -21,7 +21,11 @@ def about(request):
 
 # TODO: POST!!!
 def checkout(request):
-    return render(request, "checkout.html")
+    if not request.user.is_authenticated:
+        return redirect("login")
+    cart = get_cart(request.user)
+    return render(request, "checkout.html",
+                  cart) # TODO :make template show carts
 
 def shop(request):
     return render(request, "shop.html",
@@ -54,11 +58,11 @@ def item(request, item_id):
         id = body['id']
         email = None
         if request.user.is_authenticated:
-            email = request.user.email
+            email = sanitize_email(request.user.email)
             add_to_cart(email, id)
         else:
             print("UNAUTH")
-            return redirect("login")
+            return redirect("login") # TODO: how login??
         print(id)
         return redirect("shop")
 

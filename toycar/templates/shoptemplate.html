@@ -31,14 +31,7 @@
                     <p>Category: <i>{{ item_category }}</i></p>
                 <h4>${{ item_price }}</h4>
                 <div class="d-inline-flex">
-                    <a style="text-decoration: none; margin-right: 10px;" href="{% url 'checkout' %}">
-                        <button onclick="addToCart()"
-                                class="btn buy-btn btn-danger no-bezel">Buy Now</button>
-                    </a>
-                    <a style="text-decoration: none; margin-right: 10px;" href="{% url 'shop' %}">
-                        <button onclick="addToCart()"
-                            class="btn cart-btn btn-outline-danger">Add to Cart</button>
-                        <script>
+                     <script>
                             function addToCart() {
                                 console.log("Adding to cart " + "{{ item_id }}");
                                 var cat;
@@ -58,7 +51,6 @@
                                     method: "POST",
                                     body: JSON.stringify({
                                         "id": "{{ item_id }}",
-                                        "mail":
                                     }),
                                     headers: {
                                         "X-CSRFToken": csrf,
@@ -68,6 +60,13 @@
                                 
                             }
                         </script>
+                    <a style="text-decoration: none; margin-right: 10px;" href="{% url 'checkout' %}">
+                        <button onclick="addToCart()"
+                                class="btn buy-btn btn-danger no-bezel">Buy Now</button>
+                    </a>
+                    <a style="text-decoration: none; margin-right: 10px;" href="{% url 'shop' %}">
+                        <button onclick="addToCart()"
+                            class="btn cart-btn btn-outline-danger">Add to Cart</button>
                     </a>
                     
                 </div>
