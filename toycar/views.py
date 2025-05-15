@@ -25,7 +25,7 @@ def checkout(request):
         return redirect("login")
     cart = get_cart(request.user)
     return render(request, "checkout.html",
-                  cart) # TODO :make template show carts
+                  {"cart_items": cart, "sum": sum (cart.values()) }) # TODO :make template show carts
 
 def shop(request):
     return render(request, "shop.html",
