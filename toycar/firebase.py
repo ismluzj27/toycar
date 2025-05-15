@@ -73,6 +73,8 @@ def get_cart(user):
     email = sanitize_email(user.email)
     # ETag is enabled
     items = database_ref.child("users").child(email).get("items")[0]
+    if not items:
+        return None
     ilist = list(items.values())[0].keys()
     cart = {}
     for product_id in list(ilist):
@@ -83,6 +85,10 @@ def get_cart(user):
     print(cart)
     return cart
 
+def clear_cart(user):
+    email = sanitize_email(user.email)
+    items = database_ref.child("users").child(email).child("items")
+    items.set({})
 
 def sanitize_email(email):
     return email.lower().replace("@", "<at>").replace(".", "<dot>")

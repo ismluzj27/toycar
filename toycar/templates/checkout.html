@@ -59,7 +59,7 @@
 
             <!-- Order Summary -->
             <div class="col-md-6">
-                <h4>Order Summary</h4> {# TODO: get cart items from context. #}
+                <h4>Order Summary</h4>
                 <div class="card">
                     <div class="card-body">
                         {% if cart_items %}
@@ -76,15 +76,26 @@
                                     ${{ sum }}
                                 </strong>
                             </div>
-                            <button class="btn btn-primary w-100 mt-3">Place Order</button>
+                            <button class="btn btn-primary w-100 mt-3" onclick="checkFilledOut()">Place Order</button>
                         {% else %}
                             <p class="text-center mb-0">Empty cart</p>
+                            <a href="{% url 'shop' %}">
+                            <button class="btn btn-outline-primary w-100 mt-3">Return to Shop</button>
+                            </a>
                         {% endif %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
+   
+   <script>
+       function checkFilledOut() {
+           // TODO: checks, then...
+           
+           window.location.href = "{% url "ordered" %}"
+       }
+   </script>
 
     <!-- Footer -->
     <footer class="text-center py-3 bg-light">

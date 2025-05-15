@@ -1,7 +1,7 @@
 import json
 
 from django.shortcuts import render, redirect
-from .firebase import database_ref, add_user, add_to_cart, sanitize_email, get_cart
+from .firebase import database_ref, add_user, add_to_cart, sanitize_email, get_cart, clear_cart
 from django.contrib.auth import logout
 
 # Create your views here.
@@ -25,7 +25,8 @@ def checkout(request):
         return redirect("login")
     cart = get_cart(request.user)
     return render(request, "checkout.html",
-                  {"cart_items": cart, "sum": sum (cart.values()) }) # TODO :make template show carts
+                  {"cart_items": cart,
+                   "sum": sum (cart.values()) if cart else 0})
 
 def shop(request):
     return render(request, "shop.html",
@@ -85,6 +86,13 @@ def item(request, item_id):
                   {"item_id": item_id, "item_name": item_name, "item_desc": item_desc,
                    "item_price": item_price, "item_category": item_category})
 
+def ordered(request):
+    if request.user.is_authenticated:
+        clear_cart(request.user)
+        return render(request, "ordered.html")
+    else:
+        return redirect('shop')
+
 
 def auth_google_oauth2(request,state):
     print("request yo")
@@ -92,4 +100,4 @@ def auth_google_oauth2(request,state):
     name = user.get_full_name()  # or user.first_name + user.last_name
     email = user.email  # usually mapped automatically
     add_user(user, name, email)
-    return redirect('shop')
+    return redirect('login')
