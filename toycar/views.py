@@ -1,7 +1,7 @@
 import json
 
 from django.shortcuts import render, redirect
-from .firebase import database_ref, add_user, add_to_cart, sanitize_email, get_cart, clear_cart
+from .firebase import database_ref, add_user, add_to_cart, sanitize_email, get_cart, clear_cart, delete_user_data
 from django.contrib.auth import logout
 
 # Create your views here.
@@ -100,4 +100,11 @@ def auth_google_oauth2(request,state):
     name = user.get_full_name()  # or user.first_name + user.last_name
     email = user.email  # usually mapped automatically
     add_user(user, name, email)
-    return redirect('login')
+    return redirect('shop')
+
+
+def deletedata(request):
+    if request.user.is_authenticated:
+        delete_user_data(request.user)
+        print("Data deleted successfully")
+    return redirect('logout')

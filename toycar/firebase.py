@@ -90,5 +90,9 @@ def clear_cart(user):
     items = database_ref.child("users").child(email).child("items")
     items.set({})
 
+def delete_user_data(user):
+    email = sanitize_email(user.email)
+    database_ref.child("users").child(email).delete()
+
 def sanitize_email(email):
     return email.lower().replace("@", "<at>").replace(".", "<dot>")

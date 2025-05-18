@@ -18,4 +18,5 @@ urlpatterns = [
     path('faq/', views.faq, name='faq'),
     path('care/', views.care, name='care'),
     path('ordered/', views.ordered, name='ordered'),
+    path('deletedata/', views.deletedata, name='deletedata'),
 ]
