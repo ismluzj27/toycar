@@ -58,15 +58,22 @@ def add_to_cart(email, item_id):
             "qty": qty + 1
         })
 
-def add_user(user, name, email):
+def add_user(user, name, sanitized_email):
     users = database_ref.child("users")
-    if users.child(email).get() is not None:
-        print(email, "already exists")
+    if users.child(sanitized_email).get() is not None:
+        print(sanitized_email, "already exists")
         return
-    users.child(email).update({
+    users.child(sanitized_email).update({
         "items": []
     })
-    print(f"User {email} added")
+    print(f"User {sanitized_email} added")
+
+def update_user_settings(sanitized_email, settings):
+    print("Got here??")
+    users = database_ref.child("users")
+    users.child(sanitized_email).push({
+        "settings": settings
+    })
 
 
 def get_cart(user):

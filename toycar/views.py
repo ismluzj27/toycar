@@ -1,7 +1,8 @@
 import json
 
 from django.shortcuts import render, redirect
-from .firebase import database_ref, add_user, add_to_cart, sanitize_email, get_cart, clear_cart, delete_user_data
+from .firebase import database_ref, add_user, add_to_cart, sanitize_email, get_cart, clear_cart, delete_user_data, \
+    update_user_settings
 from django.contrib.auth import logout
 
 # Create your views here.
@@ -33,6 +34,14 @@ def shop(request):
                   {})
 
 def settings(request):
+    if request.method == 'POST' and request.user.is_authenticated:
+        print("ahh!!!")
+        update_user_settings(sanitize_email(request.user.email), {
+            "first_name": request.POST.get("firstName"),
+            "last_name": request.POST.get("lastName"),
+            "email": request.POST.get("email"),
+        })
+        return redirect("shop")
     return render(request, "settings.html")
 
 def speed(request):
