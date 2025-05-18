@@ -1,0 +1,126 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_25_25,_1_52 PM_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_25,_1_52 PM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_25,_1_52 PM_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1742881952304)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_25,_1_52 PM_[Changes]/shelved.patch	(date 1742881952304)
+@@ -0,0 +1,35 @@
++Index: .idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"e34dc0ac-6528-42ce-97e3-d5a291f94689\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/DjangoProject.iml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/toycar/firebase.py\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Python Script\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 5\n}</component>\n  <component name=\"ProjectId\" id=\"2uQHQGaq3dUAViCuMavsJoKKBPL\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RunManager\">\n    <configuration name=\"DjangoProject\" type=\"Python.DjangoServer\" factoryName=\"Django server\">\n      <module name=\"DjangoProject\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <option name=\"launchJavascriptDebuger\" value=\"false\" />\n      <option name=\"port\" value=\"8000\" />\n      <option name=\"host\" value=\"\" />\n      <option name=\"additionalOptions\" value=\"\" />\n      <option name=\"browserUrl\" value=\"\" />\n      <option name=\"runTestServer\" value=\"false\" />\n      <option name=\"runNoReload\" value=\"false\" />\n      <option name=\"useCustomRunCommand\" value=\"false\" />\n      <option name=\"customRunCommand\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-PY-243.24978.54\" />\n        <option value=\"bundled-python-sdk-91e3b7efe1d4-466328ff949b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.24978.54\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"e34dc0ac-6528-42ce-97e3-d5a291f94689\" name=\"Changes\" comment=\"\" />\n      <created>1742173860260</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1742173860260</updated>\n      <workItem from=\"1742173861346\" duration=\"3927000\" />\n      <workItem from=\"1742277082413\" duration=\"2072000\" />\n      <workItem from=\"1742444230370\" duration=\"8939000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/workspace.xml b/.idea/workspace.xml
++--- a/.idea/workspace.xml	(revision 03cf1069facf343614651555f4b76d237677eb3c)
+++++ b/.idea/workspace.xml	(date 1742881945178)
++@@ -4,14 +4,7 @@
++     <option name="autoReloadType" value="SELECTIVE" />
++   </component>
++   <component name="ChangeListManager">
++-    <list default="true" id="e34dc0ac-6528-42ce-97e3-d5a291f94689" name="Changes" comment="">
++-      <change afterPath="$PROJECT_DIR$/.idea/DjangoProject.iml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/toycar/firebase.py" afterDir="false" />
++-    </list>
+++    <list default="true" id="e34dc0ac-6528-42ce-97e3-d5a291f94689" name="Changes" comment="" />
++     <option name="SHOW_DIALOG" value="false" />
++     <option name="HIGHLIGHT_CONFLICTS" value="true" />
++     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++@@ -94,7 +87,7 @@
++       <updated>1742173860260</updated>
++       <workItem from="1742173861346" duration="3927000" />
++       <workItem from="1742277082413" duration="2072000" />
++-      <workItem from="1742444230370" duration="8939000" />
+++      <workItem from="1742444230370" duration="9334000" />
++     </task>
++     <servers />
++   </component>
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_25_25__1_52PM__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_25__1_52PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_25__1_52PM__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1742881958068)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_25__1_52PM__Changes_.xml	(date 1742881958068)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_3_25_25,_1_52 PM_[Changes]" date="1742881952305" recycled="false" toDelete="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_25,_1_52 PM_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 3/25/25, 1:52 PM [Changes]" />
++</changelist>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1742184707645)
++++ b/.idea/misc.xml	(date 1742184707645)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.12 (DjangoProject)" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_25_25,_1_53 PM_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_25,_1_53 PM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_25,_1_53 PM_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1742882011645)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_25,_1_53 PM_[Changes]/shelved.patch	(date 1742882011645)
+@@ -0,0 +1,39 @@
++Index: toycar/firebase.py
++===================================================================
++diff --git a/toycar/firebase.py b/toycar/firebase.py
++deleted file mode 100644
++--- a/toycar/firebase.py	(revision 03cf1069facf343614651555f4b76d237677eb3c)
+++++ /dev/null	(revision 03cf1069facf343614651555f4b76d237677eb3c)
++@@ -1,31 +0,0 @@
++-import firebase_admin
++-from firebase_admin import credentials, db
++-import os
++-
++-current_directory =
++-os.path.dirname (os.path.abspath (__file__))
++-json_path = os.path.join(current_directory,
++-'toycarha-firebase-adminsdk-fbsvc-c9c989a3c0.json')
++-
++-cred = credentials.Certificate(json_path)
++-firebase_admin.initialize_app(cred, {
++-    'databaseURL':
++-'https://toycarha-default-rtdb.asia-southeast1.firebasedatabase.app'/
++-})
++-
++-# Reference to the Realtime Database
++-database_ref = db.reference()
++-
++-# Function to add a user to Firebase
++-def add_user_to_firebase(name, email):
++-user_ref = database_ref.child('users').push({
++-'name': name,
++-'email': email
++-})
++-return user_ref
++-
++-# Function to retrieve all users from Firebase
++-def get_users_from_firebase():
++-users_ref = database_ref.child('users')
++-users = users_ref.get() # Fetch all users from the database
++-return users
++\ No newline at end of file

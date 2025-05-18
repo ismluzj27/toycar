@@ -11,6 +11,7 @@
 <body>
 <!-- Navbar -->
 {% include 'navbar.html' %}
+
 <!-- Speed Cars Hero Section -->
 <section class="speed-header">
     <div class="container">
@@ -19,25 +20,43 @@
     </div>
 </section>
 
-<!-- Carousel -->
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner text-center">
-        <div class="carousel-item active">
-            <img src="{% static 'speed2.JPG' %}" class="d-block w-75 mx-auto" alt="Slide 1">
+<!-- Speed Cars Card Section -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Speedster X -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'speed2.JPG' %}" class="card-img-top" alt="Speedster X">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Speedster X</h5>
+                    <p class="card-text">A high-speed racer with sleek design.</p>
+                    <a href="{% url 'item' 'speed2' %}" class="buy-btn">View Details</a>
+                </div>
+            </div>
         </div>
-        <div class="carousel-item">
-            <img src="{% static 'speed.JPG' %}" class="d-block w-75 mx-auto" alt="Slide 2">
+        <!-- Lightning Flash -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'speed1.JPG' %}" class="card-img-top" alt="Lightning Flash">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Lightning Flash</h5>
+                    <p class="card-text">Blazing fast, aerodynamic racing car.</p>
+                    <a href="{% url 'item' 'speed1' %}" class="buy-btn">View Details</a>
+                </div>
+            </div>
         </div>
-        <div class="carousel-item">
-            <img src="{% static 'speedy.JPG' %}" class="d-block w-75 mx-auto" alt="Slide 3">
+        <!-- Turbo Racer -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'speed.JPG' %}" class="card-img-top" alt="Turbo Racer">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Turbo Racer</h5>
+                    <p class="card-text">An ultra-fast car for thrill seekers.</p>
+                    <a href="{% url 'item' 'speed' %}" class="buy-btn">View Details</a>
+                </div>
+            </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
 </div>
 
 <!-- Customer Testimonials -->
