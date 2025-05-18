@@ -3,6 +3,7 @@ from pathlib import Path
 import os
 import json
 import firebase_admin
+import re
 from firebase_admin import credentials, db
 from dotenv import load_dotenv
 
@@ -43,5 +44,55 @@ if not firebase_admin._apps:
 # Reference to the Realtime Database
 database_ref = db.reference()
 
-def add_to_cart(usermail, item_id):
-    pass
+def add_to_cart(email, item_id):
+    item_ref = database_ref.child("users").child(email).child("items").child(item_id)
+    if item_ref.get() is None:
+        item_ref.update({
+            "qty": 1
+        })
+    else:
+        quant = str(item_ref.get("qty"))
+        qty = int(re.search(".*: ([0-9]+)", quant).group(1))
+        print(qty)
+        item_ref.update({
+            "qty": qty + 1
+        })
+
+def add_user(user, name, email):
+    users = database_ref.child("users")
+    if users.child(email).get() is not None:
+        print(email, "already exists")
+        return
+    users.child(email).update({
+        "items": []
+    })
+    print(f"User {email} added")
+
+
+def get_cart(user):
+    email = sanitize_email(user.email)
+    # ETag is enabled
+    items = database_ref.child("users").child(email).get("items")[0]
+    if not items:
+        return None
+    ilist = list(items.values())[0].keys()
+    cart = {}
+    for product_id in list(ilist):
+        car_ref = database_ref.child(f"cars/{product_id}")
+        name = car_ref.child("name").get()
+        price = car_ref.child("price").get()
+        cart[name] = price
+    print(cart)
+    return cart
+
+def clear_cart(user):
+    email = sanitize_email(user.email)
+    items = database_ref.child("users").child(email).child("items")
+    items.set({})
+
+def delete_user_data(user):
+    email = sanitize_email(user.email)
+    database_ref.child("users").child(email).delete()
+
+def sanitize_email(email):
+    return email.lower().replace("@", "<at>").replace(".", "<dot>")

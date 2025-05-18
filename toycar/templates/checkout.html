@@ -62,25 +62,40 @@
                 <h4>Order Summary</h4>
                 <div class="card">
                     <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span>Toy Car 1</span>
-                            <span>$20.00</span>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <span>Toy Car 2</span>
-                            <span>$25.00</span>
-                        </div>
-                        <hr>
-                        <div class="d-flex justify-content-between">
-                            <strong>Total</strong>
-                            <strong>$45.00</strong>
-                        </div>
-                        <button class="btn btn-primary w-100 mt-3">Place Order</button>
+                        {% if cart_items %}
+                            {% for item, price in cart_items.items %}
+                                <div class="d-flex justify-content-between">
+                                    <span>{{ item }}</span>
+                                    <span>${{ price }}</span>
+                                </div>
+                            {% endfor %}
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <strong>Total</strong>
+                                <strong>
+                                    ${{ sum }}
+                                </strong>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3" onclick="checkFilledOut()">Place Order</button>
+                        {% else %}
+                            <p class="text-center mb-0">Empty cart</p>
+                            <a href="{% url 'shop' %}">
+                            <button class="btn btn-outline-primary w-100 mt-3">Return to Shop</button>
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
+   
+   <script>
+       function checkFilledOut() {
+           // TODO: checks, then...
+           
+           window.location.href = "{% url "ordered" %}"
+       }
+   </script>
 
     <!-- Footer -->
     <footer class="text-center py-3 bg-light">

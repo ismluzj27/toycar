@@ -22,3 +22,4 @@ urlpatterns = [
     path('', include("toycar.urls")),
     path('auth/', include('social_django.urls', namespace='social')),
 ]
+# print (include("social_django.urls", namespace="social"))
