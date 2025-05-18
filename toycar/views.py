@@ -22,7 +22,7 @@ def about(request):
 # TODO: POST!!!
 def checkout(request):
     if not request.user.is_authenticated:
-        return redirect("login")
+        return redirect("social:begin", "google-oauth2")
     cart = get_cart(request.user)
     return render(request, "checkout.html",
                   {"cart_items": cart,
@@ -63,7 +63,7 @@ def item(request, item_id):
             add_to_cart(email, id)
         else:
             print("UNAUTH")
-            return redirect("login") # TODO: how login??
+            return redirect("social:begin", "google-oauth2")
         print(id)
         return redirect("shop")
 
