@@ -4,6 +4,19 @@ from django.shortcuts import render, redirect
 from .firebase import database_ref, add_user, add_to_cart, sanitize_email, get_cart, clear_cart, delete_user_data, \
     update_user_settings
 from django.contrib.auth import logout
+from .forms import CheckoutForm
+
+
+def checkout_view(request):
+    if request.method == 'POST':
+        form = CheckoutForm(request.POST)
+        if form.is_valid():
+            # process order (save to DB, send email, etc.)
+            return redirect('ordered')  # change as needed
+    else:
+        form = CheckoutForm()
+
+    return render(request, 'checkout.html', {'form': form})
 
 # Create your views here.
 
