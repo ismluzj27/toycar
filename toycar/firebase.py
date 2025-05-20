@@ -69,9 +69,9 @@ def add_user(user, name, sanitized_email):
     print(f"User {sanitized_email} added")
 
 def update_user_settings(sanitized_email, settings):
-    print("Got here??")
+    print(sanitized_email)
     users = database_ref.child("users")
-    users.child(sanitized_email).push({
+    users.child(sanitized_email).update({
         "settings": settings
     })
 

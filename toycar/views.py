@@ -110,6 +110,21 @@ def item(request, item_id):
 
 def ordered(request):
     if request.user.is_authenticated:
+        message = (
+                f"Hello {request.POST.get("firstName")},"
+                + "\n\nThank you for doing business with TOYCAR! Your order should arrive to you soon."
+                + "\nYour cart:"
+                + "\n\nTOYCAR"
+        )
+        cart = get_cart(request.user)
+        if cart is not None:
+            for name,price in cart.items():
+                message += "\n" + str(name) + ": " + str(price)
+
+        clear_cart(request.user)
+
+        print(message)
+
         clear_cart(request.user)
         return render(request, "ordered.html")
     else:
