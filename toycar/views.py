@@ -7,33 +7,8 @@ from django.contrib.auth import logout
 from .forms import ContactForm
 from django.core.mail import send_mail
 from django.contrib import messages
-from .firebase import save_contact_message
 
 
-def contact_view(request):
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            name = request.POST.get('name')
-            email = request.POST.get('email')
-            message = request.POST.get('message')
-
-            if name and email and message:
-            # For now, just log or email the message; optionally save it to Firebase
-                send_mail(
-                    f"Message from {name, email}",
-                    message,
-                    None,
-                    ['manglapusgilberdj@ismanila.org'],  # Change to your support address
-                    fail_silently=False,
-                )
-                save_contact_message(name, email, message)
-                messages.success(request, 'Message sent successfully!')
-                return redirect('contact')
-            else:
-                messages.error(request, 'Please fill out all fields.')
-
-    return render(request, 'contact.html')
 
 
 
