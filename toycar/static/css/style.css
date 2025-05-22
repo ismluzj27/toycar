@@ -38,7 +38,7 @@ body { background-color: var(--tcyel); }
 .product-container { margin: 40px; }
 /* Speed Cars Page Specific Styles */
 .speed-header { background-image: url('https://via.placeholder.com/1600x500'); background-size: cover; background-position: center; color: white; padding: 25px 0; text-align: center; }
-.speed-title { font-size: 3rem; font-weight: bold; color: var(--tcred-dark); text-transform: uppercase; margin-bottom: 20px; }
+.speed-title { font-size: 3rem; font-weight: bold; color: var(--tcred); text-transform: uppercase; margin-bottom: 20px; }
 .speed-description { font-size: 1.2rem; color: var(--tcred); margin-bottom: 30px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto; }
 .speed-image { width: 100%; height: auto; border-radius: 8px; }
 .speed-carousel .carousel-item { transition: transform 1s ease; }
@@ -47,25 +47,25 @@ body { background-color: var(--tcyel); }
 .speed-testimonials h2 { font-size: 2.5rem; margin-bottom: 30px; }
 .testimonial-card { background-color: white; border: none; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center; margin: 15px; }
 .testimonial-card img { width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px; }
-.testimonial-card p { font-size: 1.1rem; color: var(--tcred-dark); }
+.testimonial-card p { font-size: 1.1rem; color: var(--tcred); }
 
 /* Classic Cars Page Specific Styles */
 .classic-header { background-image: url('https://via.placeholder.com/1600x500'); background-size: cover; background-position: center; color: white; padding: 25px 0; text-align: center; }
 .classic-title { font-size: 3rem; font-weight: bold; color: var(--tcyel); text-transform: uppercase; margin-bottom: 20px; }
 .classic-description { font-size: 1.2rem; color: var(--tcred); margin-bottom: 30px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto; }
 .classic-image { width: 100%; height: auto; border-radius: 8px; }
-.classic-testimonials { background-color: var(--tcred-light); padding: 50px 0; text-align: center; }
+.classic-testimonials { background-color: var(--tcred); padding: 50px 0; text-align: center; }
 .classic-testimonials h2 { font-size: 2.5rem; margin-bottom: 30px; }
 .classic-testimonial-card { background-color: white; border: none; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center; margin: 15px; }
 .classic-testimonial-card img { width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px; }
-.classic-testimonial-card p { font-size: 1.1rem; color: var(--tcyel); }
+.classic-testimonial-card p { font-size: 1.1rem; color: var(--tcred); }
 
 /* Off-road Page Specific Styles */
 .offroad-header { background-image: url('https://via.placeholder.com/1600x500'); background-size: cover; background-position: center; color: white; padding: 25px 0; text-align: center; }
 .offroad-title { font-size: 3rem; font-weight: bold; color: var(--tcred); text-transform: uppercase; margin-bottom: 20px; }
 .offroad-description { font-size: 1.2rem; color: var(--tcyel); margin-bottom: 30px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto; }
 .offroad-image { width: 100%; height: auto; border-radius: 8px; }
-.offroad-testimonials { background-color: var(--tcred-light); padding: 50px 0; text-align: center; }
+.offroad-testimonials { background-color: var(--tcred); padding: 50px 0; text-align: center; }
 .offroad-testimonials h2 { font-size: 2.5rem; margin-bottom: 30px; }
 .offroad-testimonial-card { background-color: white; border: none; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center; margin: 15px; }
 .offroad-testimonial-card img { width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px; }

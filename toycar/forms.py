@@ -12,3 +12,9 @@ class CheckoutForm(forms.Form):
     card_number = forms.CharField(max_length=19)
     exp_date = forms.CharField(max_length=5)
     cvv = forms.CharField(max_length=3)
+
+
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea)

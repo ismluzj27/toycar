@@ -1,22 +1,41 @@
 import json
-
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .firebase import database_ref, add_user, add_to_cart, sanitize_email, get_cart, clear_cart, delete_user_data, \
     update_user_settings
 from django.contrib.auth import logout
-from .forms import CheckoutForm
+from .forms import ContactForm
+from django.core.mail import send_mail
+from django.contrib import messages
+from .firebase import save_contact_message
 
 
-def checkout_view(request):
+def contact_view(request):
     if request.method == 'POST':
-        form = CheckoutForm(request.POST)
+        form = ContactForm(request.POST)
         if form.is_valid():
-            # process order (save to DB, send email, etc.)
-            return redirect('ordered')  # change as needed
-    else:
-        form = CheckoutForm()
+            name = request.POST.get('name')
+            email = request.POST.get('email')
+            message = request.POST.get('message')
 
-    return render(request, 'checkout.html', {'form': form})
+            if name and email and message:
+            # For now, just log or email the message; optionally save it to Firebase
+                send_mail(
+                    f"Message from {name, email}",
+                    message,
+                    None,
+                    ['manglapusgilberdj@ismanila.org'],  # Change to your support address
+                    fail_silently=False,
+                )
+                save_contact_message(name, email, message)
+                messages.success(request, 'Message sent successfully!')
+                return redirect('contact')
+            else:
+                messages.error(request, 'Please fill out all fields.')
+
+    return render(request, 'contact.html')
+
+
 
 # Create your views here.
 
@@ -130,3 +149,20 @@ def deletedata(request):
         delete_user_data(request.user)
         print("Data deleted successfully")
     return redirect('logout')
+
+
+from django.core.mail import send_mail
+
+def test_email(request):
+    send_mail(
+        "Test Email",
+        "This is a test.",
+        "jvgilberd@gmail.com",
+        ["manglapusgilberdj@ismanila.org"],
+        fail_silently=False
+    )
+    return HttpResponse("Sent.")
+
+def test_firebase(request):
+    database_ref.child("test_node").push({"test": "Hello Firebase!"})
+    return HttpResponse("Firebase push successful.")

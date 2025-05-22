@@ -15,8 +15,11 @@ urlpatterns = [
     path('speed/', views.speed, name='speed'),
     path('offroad/', views.offroad, name='offroad'),
     path('contact/', views.contact, name='contact'),
+    path('contact_view/', views.contact_view, name='contact_view'),
     path('faq/', views.faq, name='faq'),
     path('care/', views.care, name='care'),
+    path('test-email/', views.test_email, name='test_email'),
+    path('test-firebase/', views.test_firebase, name='test_firebase'),
     path('ordered/', views.ordered, name='ordered'),
     path('deletedata/', views.deletedata, name='deletedata'),
 ]
